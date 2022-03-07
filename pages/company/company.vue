@@ -1,8 +1,12 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+		<view class="swiper-wrap">
+			<swiper class="swiper" circular :indicator-dots="swiper.indicatorDots" :autoplay="swiper.autoplay"
+				:interval="swiper.interval" :duration="swiper.duration">
+				<swiper-item class="swiper-item" v-for="(image, index) in swiper.images" :key="index">
+					<image class="swiper-img" :src="image" mode="aspectFill"/>
+				</swiper-item>
+			</swiper>
 		</view>
 	</view>
 </template>
@@ -11,7 +15,17 @@
 	export default {
 		data() {
 			return {
-				title: '良信'
+				title: '良信',
+				swiper: {
+					images: ["/static/swiper-01.png", "/static/swiper-02.png", "/static/swiper-03.png",
+						"/static/swiper-04.png"
+					],
+					background: ['color1', 'color2', 'color3'],
+					indicatorDots: true,
+					autoplay: true,
+					interval: 2000,
+					duration: 500
+				}
 			}
 		},
 		onLoad() {
@@ -29,6 +43,25 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.swiper-wrap {
+		width: 100%;
+	}
+
+	.swiper {
+		width: inherit;
+		height: 263rpx;
+	}
+
+	.swiper-item {
+		display: block;
+		text-align: center;
+	}
+	
+	.swiper-img {
+		width: 100%;
+		height: 263rpx;
 	}
 
 	.logo {
