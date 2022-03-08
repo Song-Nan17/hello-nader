@@ -10,7 +10,23 @@
 		{
 			"path": "pages/company/company",
 			"style": {
-				"navigationBarTitleText": "良信"
+				"navigationBarTitleText": "良信",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#FFFFFF"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/company/about",
+			"style": {
+				"navigationBarTitleText": "关于"
 			}
 		},
 		{
@@ -18,11 +34,13 @@
 			"style": {
 				"navigationBarTitleText": "宋楠"
 			}
+		}, {
+			"path": "pages/web-review/web-view"
 		}
 	],
 	"globalStyle": {
 		"pageOrientation": "portrait",
-		"navigationBarTitleText": "Hello uniapp",
+		"navigationBarTitleText": "Hello Nader",
 		"navigationBarTextStyle": "white",
 		"navigationBarBackgroundColor": "#1296db",
 		"backgroundColor": "#F8F8F8",

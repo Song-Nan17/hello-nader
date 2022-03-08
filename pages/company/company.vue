@@ -64,6 +64,11 @@
 		onLoad() {
 
 		},
+		onNavigationBarButtonTap(e) {
+			uni.navigateTo({
+				url: '/pages/company/about'
+			});
+		},
 		methods: {
 			onClick(e) {
 				console.log(e)
