@@ -30,11 +30,18 @@
 			}
 		},
 		{
+			"path": "pages/movies/movies",
+			"style": {
+				"navigationBarTitleText": "电影"
+			}
+		},
+		{
 			"path": "pages/about-me/about-me",
 			"style": {
 				"navigationBarTitleText": "宋楠"
 			}
-		}, {
+		},
+		{
 			"path": "pages/web-review/web-view"
 		}
 	],
@@ -65,6 +72,11 @@
 				"iconPath": "static/company.png",
 				"selectedIconPath": "static/companyHL.png",
 				"text": "良信"
+			}, {
+				"pagePath": "pages/movies/movies",
+				"iconPath": "static/movie.png",
+				"selectedIconPath": "static/movieHL.png",
+				"text": "电影"
 			},
 			{
 				"pagePath": "pages/about-me/about-me",
