@@ -1,13 +1,13 @@
 <template>
 	<view class="container">
-		<u-section title="自我评价" type="line">
+		<u-section title="自我评价" type="line" class="section self-assements">
 			<uni-list :border="false">
 				<uni-list-item :border="false" v-for="(selfAssessment,index) in selfAssessments" :show-extra-icon="true"
 					:extra-icon="extraIcon" :title="selfAssessment" :key="index" />
 			</uni-list>
 		</u-section>
 
-		<u-section title="项目经历" type="line">
+		<u-section title="项目经历" type="line" class="section projects">
 			<uni-collapse>
 				<uni-collapse-item v-for="(project,index) in projects" :key="index" :show-animation="true"
 					:title="project.name">
@@ -72,6 +72,10 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	}
+	
+	.section {
+		width: 100%;
 	}
 
 	.project-content {
